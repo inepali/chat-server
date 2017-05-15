@@ -72,7 +72,7 @@ socket.on('connection', function (conn) {
         //io.sockets.to(player.room).emit('UPDATE_GAME', { players: players, thisPlayer: player, choiceCard: null });
     });
 
-    connection.on("message", function(msg){
+    conn.on("message", function(msg){
         console.log(msg);
         socket.emit("message", msg);
     })
