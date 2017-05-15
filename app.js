@@ -6,7 +6,7 @@ var socket = require("socket.io"),
 
 
 socket.on('connection', function(connection){
-    console.log("User connected");
+    console.log("User connected#" + connection.id);
 
     connection.on("message", function(msg){
         socket.emit("message", msg);
